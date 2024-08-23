@@ -10,8 +10,8 @@ typedef NodoListaEnlazada *ListaEnlazada;
 
 struct  NodoListaEnlazada
 {
-    /* COMPLETAR */
-
+    int valor;
+    NodoListaEnlazada *siguiente;
 };
 
 /**
@@ -25,6 +25,7 @@ struct  NodoListaEnlazada
  * @param valor Valor del nodo inicializado
  */
 void NodoListaEnlazada_inicializa(NodoListaEnlazada *nodo,int valor);
+
 /**
  * @brief Inicializa una lista enlazada nueva.
  * 
@@ -34,6 +35,7 @@ void NodoListaEnlazada_inicializa(NodoListaEnlazada *nodo,int valor);
  * @param lista Puntero a lista a inicializar
  */
 void ListaEnlazada_inicializa(ListaEnlazada *lista);
+
 /**
  * @brief Inserta un nodo al principio de la lista enlazada
  * 
@@ -44,6 +46,7 @@ void ListaEnlazada_inicializa(ListaEnlazada *lista);
  * @param nodo Puntero a nuevo nodo previamente inicializado
  */
 void ListaEnlazada_inserta(ListaEnlazada *lista, NodoListaEnlazada *nodo);
+
 /**
  * @brief Determina si una lista está vacía (no tiene elementos)
  * 
@@ -52,6 +55,7 @@ void ListaEnlazada_inserta(ListaEnlazada *lista, NodoListaEnlazada *nodo);
  * @return false Lista no vacía
  */
 bool ListaEnlazada_esVacia(ListaEnlazada *lista);
+
 /**
  * @brief Obtiene el nodo a la cabeza de la lista enlazada
  * 
@@ -60,6 +64,7 @@ bool ListaEnlazada_esVacia(ListaEnlazada *lista);
  *         vacía
  */
 NodoListaEnlazada *ListaEnlazada_obtNodoCabeza(ListaEnlazada *lista);
+
 /**
  * @brief Obtiene el valor a la cabeza de la lista enlazada
  * 
@@ -68,6 +73,7 @@ NodoListaEnlazada *ListaEnlazada_obtNodoCabeza(ListaEnlazada *lista);
  * @return int 0 si obtuvo el valor, -1 si la lista está vacía
  */
 int ListaEnlazada_obtCabeza(ListaEnlazada *lista, int *valor);
+
 /**
  * @brief Obtiene la cola de la lista enlazada. La cola es otra lista que inicia
  * en el nodo siguiente a la cabeza. Puede estar vacía si no hay más nodos
@@ -78,6 +84,7 @@ int ListaEnlazada_obtCabeza(ListaEnlazada *lista, int *valor);
  * @return ListaEnlazada* Puntero a cola de la lista
  */
 ListaEnlazada *ListaEnlazada_obtCola(ListaEnlazada *lista);
+
 /**
  * @brief Remueve el nodo a la cabeza de la lista y retorna una referencia al
  * mismo (para reutilizar o liberar memoria)

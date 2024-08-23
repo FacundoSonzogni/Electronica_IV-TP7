@@ -10,8 +10,10 @@ typedef  enum TipoMonticulo{
 }TipoMonticulo;
 
 typedef struct Monticulo{
-/*COMPLETAR*/
-
+    int *celdas;
+    int numCeldas;
+    int numElementos;
+    TipoMonticulo tipo;
 }Monticulo;
 
 
@@ -22,8 +24,7 @@ typedef struct Monticulo{
  * @param celdas 
  * @param numCeldas 
  */
-void Monticulo_inicializa(
-        Monticulo *m,int *celdas,int numCeldas,TipoMonticulo tipo);
+void Monticulo_inicializa(Monticulo *m,int *celdas,int numCeldas,TipoMonticulo tipo);
 
 /**
  * @brief Introduce un valor en el montículo
